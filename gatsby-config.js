@@ -7,6 +7,8 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+require('dotenv').config({ path: '.env' });
 module.exports = {
   plugins: [],
 }
+

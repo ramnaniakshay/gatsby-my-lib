@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+
 function LibraryTable() {
   const [libraries, setLibraries] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  
+
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get('http://localhost:1337/api/my-librarays');
+        const response = await axios.get(`${process.env.GATSBY_API_URL}/my-librarays`);
         setLibraries(response.data.data); // Access the data array within the response
       } catch (error) {
         setError(error);

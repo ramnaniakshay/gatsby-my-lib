@@ -11,7 +11,7 @@ const BookForm = () => {
   const onSubmit = async (data) => {
     try {
       const response = await axios.post(
-        'http://localhost:1337/api/my-librarays',
+        `${process.env.GATSBY_API_URL}/my-librarays`,
         {
             data:{
           bookTitle: data.bookTitle,

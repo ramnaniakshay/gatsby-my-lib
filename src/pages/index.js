@@ -1,7 +1,6 @@
 import * as React from "react"
 import {Link} from 'gatsby'
-import BookForm from "./BookForm"
-import BookTable from "./BookTable"
+
 
 export default function Home() {
   return <div>
